@@ -1,0 +1,6 @@
+{
+  "name": "CoinJar",
+  "description": "A sleek, liquid-themed monthly expense and income tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

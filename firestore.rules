@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Shared functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    match /transactions/{transactionId} {
+      allow read: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (resource.data.userId == null || request.auth.uid == resource.data.userId);
+      allow create: if isAuthenticated() && request.auth.uid == request.resource.data.userId;
+    }
+    
+    match /wallets/{walletId} {
+      allow read: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (resource.data.userId == null || request.auth.uid == resource.data.userId);
+      allow create: if isAuthenticated() && request.auth.uid == request.resource.data.userId;
+    }
+    
+    match /settings/{userId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collections": [
+    {
+      "name": "transactions",
+      "rules": [
+        {
+          "allow": "read, create, update, delete",
+          "condition": "request.auth != null && request.auth.uid == resource.data.userId"
+        },
+        {
+          "allow": "create",
+          "condition": "request.auth != null && request.resource.data.userId == request.auth.uid"
+        }
+      ],
+      "schema": {
+        "userId": "string",
+        "type": "string",
+        "amount": "number",
+        "category": "string",
+        "date": "string",
+        "wallet": "string",
+        "createdAt": "timestamp"
+      }
+    }
+  ]
+}
