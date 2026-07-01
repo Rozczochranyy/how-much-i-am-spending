@@ -2,7 +2,7 @@
 
 > A modern, minimalist personal finance tracker that gives you a clear view of your money — income, expenses, and balance — without the clutter of traditional accounting tools.
 
-**🔗 Live demo:** [YOUR_CLOUD_RUN_URL]
+**🔗 Live demo:** [https://purl.pl/coinjar]
 **💻 Deployed on:** Google Cloud Run
 
 <!-- Add a screenshot of the app (the glassmorphism dark UI looks great): -->
@@ -72,9 +72,9 @@ Firebase project configuration is included in `firebase-applet-config.json`. To 
 
 ## 👤 Author
 
-`[Your name]` — Project Manager growing into **AI Product Management** and building things end-to-end.
+`[Artur Jachimczak]` — Project Manager growing into **AI Product Management** and building things end-to-end.
 
-`[LinkedIn link]`
+`www.linkedin.com/in/artur-jachimczak-artur-jachimczak-pm`
 
 ---
 
